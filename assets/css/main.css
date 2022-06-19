@@ -61,6 +61,10 @@ nav{
     display: inline-flex;
 }
 
+.btn{
+    cursor: pointer;
+}
+
 .Header-items{
     margin: 0%;
     padding: 25px 15px 25px 15px;
@@ -96,7 +100,7 @@ nav{
 .container-Pokedex{
     display: flex;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 2rem;
     width: 1165px;
     height: 1165px;
     text-align: center;
@@ -106,7 +110,7 @@ nav{
 .Pokedex-background{
     display: flex;
     margin: auto;
-    margin-top: 5.5rem;
+    margin-top: 4rem;
     width: 800px;
     height: 1180px;
     background-color: #fff;
@@ -114,12 +118,26 @@ nav{
 }
 
 .form{
-    margin-top: 5.5rem;
+    margin-top: 7rem;
+    margin-right: 50.5rem;
     display: flex;
     justify-content: center;
     color: #12bcfe;
 }
 
+.form-input{
+    width: 20rem;
+    height: 3rem;
+    border:  3px solid transparent;
+    border-radius: 15px;
+}
+
+.form-btn{
+    display: inline-block;
+    border: 0.5px solid var(--secondary-background-color);
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 15px;
+}
 
 
 /* Reusable classes */
