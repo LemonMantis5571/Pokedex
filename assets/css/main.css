@@ -185,6 +185,25 @@ nav{
     margin-bottom: -1rem;
 }
 
+.callout{
+    display: flex;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: -12.5rem;
+    float:initial;
+    width: 22%;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px 0px 20px 20px;
+    color: var(--light-color);
+    background-color: #4dad5b;
+}
+
+.callout:hover{
+    transition: background-color 0.1s linear;
+    background-color: #54c364;
+    
+}
 
 /* Reusable classes */
 
