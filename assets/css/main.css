@@ -118,15 +118,14 @@ nav{
 }
 
 .form{
-    margin-top: 7rem;
-    margin-right: 50.5rem;
+    margin-top: 2rem;
+    margin-left: 16rem;
     display: flex;
-    justify-content: center;
     color: #12bcfe;
 }
 
 .form-input{
-    width: 20rem;
+    width: 15rem;
     height: 3rem;
     border:  3px solid transparent;
     border-radius: 15px;
@@ -137,6 +136,14 @@ nav{
     border: 0.5px solid var(--secondary-background-color);
     padding: 0.5rem 1rem 0.5rem 1rem;
     border-radius: 15px;
+}
+
+.Title{
+    color: black;
+    margin-top: 7rem;
+    margin-left: 16rem;
+    align-self: auto;
+    margin-bottom: -1rem;
 }
 
 
