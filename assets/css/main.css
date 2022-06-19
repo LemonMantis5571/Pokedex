@@ -75,16 +75,25 @@ nav{
     cursor: pointer;
 
 }
+
+.Header-items-current{
+    margin: 0%;
+    padding: 25px 15px 25px 15px;
+    border: 1rem hidden;
+    height: 100%;
+    border-radius: 0px 0px 0px 10px;
+    background-color:red;
+    cursor: pointer;
+}
+
 .Header-items:hover{
     background-color: red;
     
     color: var(--light-color);
 }
 
-.Header-list{
-    font-weight: 300px;
-    font-size: var(--font-size-xsm);
-    font-family: var(--font-family);
+.header-list-current{
+    background-color: var(--transparent-dark-color);
 
 }
 
