@@ -151,7 +151,7 @@ nav{
     margin: auto;
     margin-top: 4rem;
     width: 800px;
-    height: 1120px;
+    height: 910px;
     background-color: #fff;
     opacity: 1;
 }
@@ -214,21 +214,20 @@ nav{
 
 #pokedex{
     display: grid;
-    margin-right: 5rem;
     grid-template-columns: repeat(3, 200px);
     grid-template-rows: repeat(3, auto);
     grid-gap: 3rem;
     padding-inline-start: 0;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
 }
 .card{
-
     width: 200px;
-
     list-style: none;
     padding: 20px;
     background-color: #f4f4f4;
     color: #222;
-    text-align: center;
 }
 
 .card:hover{
