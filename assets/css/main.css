@@ -151,7 +151,7 @@ nav{
     margin: auto;
     margin-top: 4rem;
     width: 800px;
-    height: 1180px;
+    height: 1120px;
     background-color: #fff;
     opacity: 1;
 }
@@ -204,6 +204,56 @@ nav{
     background-color: #54c364;
     
 }
+
+
+/*  Pokemon Card styles */
+.Pokemon-Container{
+    padding: 40px;
+    margin: 0 auto;
+}
+
+#pokedex{
+    display: grid;
+    margin-right: 5rem;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 3rem;
+    padding-inline-start: 0;
+}
+.card{
+
+    width: 200px;
+
+    list-style: none;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #222;
+    text-align: center;
+}
+
+.card:hover{
+    animation: bounce 0.5s linear;
+}
+.card-image{
+    width: 100px;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 /* Reusable classes */
 
