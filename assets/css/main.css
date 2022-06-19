@@ -33,7 +33,7 @@ body{
     font-family: var(--font-family);
     font-weight: 300px;
     color: var(--light-color-alt);
-    font-size: var(--font-size-sm);
+    font-size: 1.1rem;
     background-image:  url('background.jpg');
 }
 
@@ -70,7 +70,7 @@ nav{
     padding: 25px 15px 25px 15px;
     border: 1rem hidden;
     height: 100%;
-    border-radius: 0px 0px 0px 10px;
+    border-radius: 0px 0px 0px 0px;
     background-color: var(--transparent-light-color);
     cursor: pointer;
 
@@ -80,9 +80,8 @@ nav{
     margin: 0%;
     padding: 25px 15px 25px 15px;
     border: 1rem hidden;
-    height: 100%;
-    border-radius: 0px 0px 0px 10px;
-    background-color:red;
+    border-radius: 0px 0px 0px 0px;
+    background-color:#E3350D;
     cursor: pointer;
 }
 
@@ -91,6 +90,35 @@ nav{
     
     color: var(--light-color);
 }
+
+.home{
+    border-radius: 5px 0px 0px 5px;
+}
+
+.home:hover{
+    background-color: #919191;
+}
+
+
+.VideoGames:hover{
+    background-color: #ee6b2f;
+}
+
+.CardGame:hover{
+    background-color: #e6bc2f;
+}
+
+.PokemonTV:hover{
+    background-color: #4dad5b;
+}
+
+.news {
+    border-radius: 0px 5px 5px 0px;
+}
+.news:hover{
+    background-color: #1b53ba;
+}
+
 
 .header-list-current{
     background-color: var(--transparent-dark-color);
@@ -104,6 +132,8 @@ nav{
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
+    height: 20px;
+    width: 100%;
 }
 
 .container-Pokedex{
