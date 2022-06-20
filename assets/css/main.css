@@ -254,9 +254,11 @@ nav{
 }
 
 .pagination {
-    display: inline-block;
-    margin-top: 3rem;
-    background-color: var(--light-color);
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    justify-content: center;
+
   }
   
 .pagination a {
@@ -264,6 +266,7 @@ nav{
     float: left;
     padding: 8px 16px;
     text-decoration: none;
+    background-color: var(--light-color);
 }
   
 .pagination a.active {
