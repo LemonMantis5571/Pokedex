@@ -218,7 +218,7 @@ nav{
     grid-template-rows: repeat(3, auto);
     grid-gap: 3rem;
     padding-inline-start: 0;
-    align-items: center;
+    align-items: start;
     justify-items: center;
     margin: 0 auto;
 }
@@ -253,7 +253,25 @@ nav{
     }
 }
 
-
+.pagination {
+    display: inline-block;
+    margin-top: 3rem;
+    background-color: var(--light-color);
+  }
+  
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+  
+.pagination a:hover:not(.active) {background-color: #ddd;}
 /* Reusable classes */
 
 /* Header */
