@@ -267,12 +267,20 @@ nav{
     padding: 8px 16px;
     text-decoration: none;
     background-color: var(--light-color);
+    cursor: pointer;
 }
   
 .pagination a.active {
     background-color: #4CAF50;
     color: white;
 }
+
+.active{
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
   
 .pagination a:hover:not(.active) {background-color: #ddd;}
 /* Reusable classes */

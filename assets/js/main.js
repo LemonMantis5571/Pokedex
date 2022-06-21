@@ -9,17 +9,31 @@ console.log(next);
 
 let limit = 8;
 let offset = 1;
-
+var url = "http://www.example.com/section_one/index.html";
+var filename = url.match(/[^\\/]+$/)[0];
+console.log(filename);
 
 previous.addEventListener("click", () => {
     if (offset != 1) {
+      previous.removeAttribute('href');
+      previous.classList.add('active');
       offset -= 9;
       removeChildNodes(pokemonContainer);
       fetchPokemons(offset, limit);
     }
 });
+
+console.log(offset);
+
+if (offset == 1) {
+    previous.classList.add('active');
+    previous.removeAttribute('href');
+}
+
+      
   
-  next.addEventListener("click", () => {
+next.addEventListener("click", () => {
+    previous.classList.remove('active');
     offset += 9;
     removeChildNodes(pokemonContainer);
     fetchPokemons(offset, limit);
