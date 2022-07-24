@@ -9,9 +9,6 @@ console.log(next);
 
 let limit = 8;
 let offset = 1;
-var url = "http://www.example.com/section_one/index.html";
-var filename = url.match(/[^\\/]+$/)[0];
-console.log(filename);
 
 previous.addEventListener("click", () => {
     if (offset != 1) {
@@ -40,11 +37,11 @@ next.addEventListener("click", () => {
 });
 
 
-const promises = [];
-function fetchPokemon(id) {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
-      .then((res) => res.json())
-      .then((data) => {
+
+async function fetchPokemon(id) {
+  
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
+  const data = await res.json();
         const pokemon = {
             name: data.name,
             id: data.id,
@@ -53,7 +50,7 @@ function fetchPokemon(id) {
 
         }
         MostrarPokemon(pokemon);
-      });
+    
 };
 
 function fetchPokemons(offset, limit) {
