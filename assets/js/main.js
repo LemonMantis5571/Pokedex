@@ -3,6 +3,7 @@ const pokedex = document.getElementById("pokedex");
 const pokemonContainer = document.querySelector(".pokedex");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
+const SearchBTN = document.querySelector(".form-btn")
 console.log(pokedex);
 console.log(previous);
 console.log(next);
@@ -53,6 +54,8 @@ async function fetchPokemon(id) {
     
 };
 
+
+
 function fetchPokemons(offset, limit) {
     for (let i = offset; i <= offset + limit; i++) {
       fetchPokemon(i);
@@ -89,3 +92,46 @@ function removeChildNodes(parent) {
 /* Swiper */
 
 
+/* Searcher */
+
+SearchBTN.addEventListener("click", e => {
+  e.preventDefault();
+
+  removeChildNodes(pokemonContainer);
+
+  let id = document.querySelector(".form-input").value;
+
+  
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then(res => res.json())
+    .then(data => {
+    console.log(data)
+          const pokemon = {
+              name: data.name,
+              id: data.id,
+              image: data.sprites['front_default'],
+              types: data.types.map(type => type.type.name).join(', ')
+  }
+  MostrarPokemon(pokemon);
+});
+  
+
+  function MostrarPokemon(pokemon){
+    const card = document.createElement('li');
+    card.classList.add('card');
+    const cardImage = document.createElement('img');
+    cardImage.classList.add('card-image');
+    cardImage.src = pokemon.image;
+    const cardInfo = document.createElement('h3');
+    cardInfo.classList.add('Pokemon-info');
+    cardInfo.innerHTML = `${pokemon.id}. ${pokemon.name.toUpperCase()}`;
+    const cardDescription = document.createElement('p');
+    cardDescription.classList.add('Pokemon-Description');
+    cardDescription.innerHTML = `Type: ${pokemon.types}`;
+    card.appendChild(cardImage);
+    card.appendChild(cardInfo);
+    card.appendChild(cardDescription);
+    pokemonContainer.appendChild(card);
+    }
+        
+});
