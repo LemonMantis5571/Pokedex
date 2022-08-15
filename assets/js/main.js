@@ -101,7 +101,7 @@ SearchBTN.addEventListener("click", (e) => {
     MostrarPokemon(pokemon);
   }
   
-  let id = document.querySelector(".form-input").value;
+  let id = document.querySelector(".form-input").value.toLowerCase();
 
   
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
