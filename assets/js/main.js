@@ -94,11 +94,13 @@ function removeChildNodes(parent) {
 
 /* Searcher */
 
-SearchBTN.addEventListener("click", e => {
+SearchBTN.addEventListener("click", (e) => {
   e.preventDefault();
 
-  removeChildNodes(pokemonContainer);
-
+  if(e.target.value === ' '){
+    MostrarPokemon(pokemon);
+  }
+  
   let id = document.querySelector(".form-input").value;
 
   
@@ -110,8 +112,9 @@ SearchBTN.addEventListener("click", e => {
               name: data.name,
               id: data.id,
               image: data.sprites['front_default'],
-              types: data.types.map(type => type.type.name).join(', ')
+              types: data.types.map(type => type.type.name).join(', '),
   }
+  removeChildNodes(pokemonContainer);
   MostrarPokemon(pokemon);
 });
   
