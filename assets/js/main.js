@@ -113,25 +113,6 @@ SearchBTN.addEventListener("click", (e) => {
   }
   removeChildNodes(pokemonContainer);
   MostrarPokemon(pokemon);
-});
-  
-
-  function MostrarPokemon(pokemon){
-    const card = document.createElement('li');
-    card.classList.add('card');
-    const cardImage = document.createElement('img');
-    cardImage.classList.add('card-image');
-    cardImage.src = pokemon.image;
-    const cardInfo = document.createElement('h3');
-    cardInfo.classList.add('Pokemon-info');
-    cardInfo.innerHTML = `${pokemon.id}. ${pokemon.name.toUpperCase()}`;
-    const cardDescription = document.createElement('p');
-    cardDescription.classList.add('Pokemon-Description');
-    cardDescription.innerHTML = `Type: ${pokemon.types}`;
-    card.appendChild(cardImage);
-    card.appendChild(cardInfo);
-    card.appendChild(cardDescription);
-    pokemonContainer.appendChild(card);
-    }
+  });
         
 });
