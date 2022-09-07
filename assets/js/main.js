@@ -89,10 +89,7 @@ function removeChildNodes(parent) {
       parent.removeChild(parent.firstChild);
     }
 }
-/* Swiper */
 
-
-/* Searcher */
 
 SearchBTN.addEventListener("click", (e) => {
   e.preventDefault();
