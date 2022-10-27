@@ -4,6 +4,7 @@ const pokemonContainer = document.querySelector(".pokedex");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
 const SearchBTN = document.querySelector(".form-btn")
+const SearchInpunt = document.querySelector(".form-input");
 console.log(pokedex);
 console.log(previous);
 console.log(next);
@@ -116,3 +117,30 @@ SearchBTN.addEventListener("click", (e) => {
   });
         
 });
+
+
+SearchInpunt.addEventListener("keyup",(e) =>{
+  e.preventDefault();
+
+  if(e.target.value === ' '){
+    MostrarPokemon(pokemon);
+  }
+  
+  let id = document.querySelector(".form-input").value.toLowerCase();
+
+  
+  fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+    .then(res => res.json())
+    .then(data => {
+    console.log(data)
+          const pokemon = {
+              name: data.name,
+              id: data.id,
+              image: data.sprites['front_default'],
+              types: data.types.map(type => type.type.name).join(', '),
+  }
+  removeChildNodes(pokemonContainer);
+  MostrarPokemon(pokemon);
+  });
+
+})
